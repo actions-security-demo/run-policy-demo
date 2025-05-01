@@ -1,0 +1,22 @@
+name: Actions - Fail
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Harden-Runner Fork
+        uses: ashishkurmi/harden-runner@main
+        with:
+          egress-policy: audit
+    
+      - name: Code Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      
+      - name: Docker Action ashishkurmi/hello-action
+        uses: ashishkurmi/hello-action@main
+        env:
+          SLEEPINSECONDS: 5
