@@ -1,0 +1,15 @@
+name: RunsOn - Fail
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Deploy
+    runs-on: windows-latest
+    steps:
+
+      # Checkout code
+      - run: sleep 20
+      - name: Code Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
