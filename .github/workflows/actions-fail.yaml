@@ -6,17 +6,20 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Harden-Runner Fork
-        uses: ashishkurmi/harden-runner@main
+      # Allowed as per policy
+      - name: Harden-Runner
+        uses: step-security/harden-runner@v2
         with:
           egress-policy: audit
     
+      # Allowed as per policy
       - name: Code Checkout
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
       
-      - name: Docker Action ashishkurmi/hello-action
-        uses: ashishkurmi/hello-action@main
-        env:
-          SLEEPINSECONDS: 5
+      # Internal action - not allowed as per policy
+      - name: Harden-Runner Fork
+        uses: actions-security-demo/harden-runner@main
+        with:
+          egress-policy: audit
