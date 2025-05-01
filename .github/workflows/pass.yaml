@@ -1,0 +1,13 @@
+name: Pass
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+ 
+      # Checkout code
+      - run: sleep 20
+      - name: Code Checkout
+        uses: actions/checkout@v2
