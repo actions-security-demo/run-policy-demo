@@ -4,11 +4,14 @@ on:
 jobs:
   build:
     name: Deploy
+    # windows-latest runner label not allowed as per policy
     runs-on: windows-latest
     steps:
-
-      # Checkout code
-      - run: sleep 20
+      - name: Harden-Runner
+        uses: step-security/harden-runner@v2
+        with:
+          egress-policy: audit
+    
       - name: Code Checkout
         uses: actions/checkout@v2
         with:
