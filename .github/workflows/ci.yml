@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # This is using a compromised action
+      # This is using a compromised action.
       - name: Run a one-line script
         uses: step-security/dummy-compromised-action@main
 
