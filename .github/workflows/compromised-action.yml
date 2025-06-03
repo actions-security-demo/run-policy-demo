@@ -1,4 +1,4 @@
-name: Compromised action
+name: Compromised action - Fail
 
 on:
   push:
