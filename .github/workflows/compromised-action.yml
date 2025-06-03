@@ -1,4 +1,4 @@
-name: CI
+name: Compromised action
 
 on:
   push:
