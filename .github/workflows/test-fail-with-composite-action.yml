@@ -11,11 +11,11 @@ jobs:
 
     steps:
       - name: Harden Runner
-        uses: step-security/harden-runner@v2
+        uses: step-security/harden-runner@f4a75cfd619ee5ce8d5b864b0d183aff3c69b55a # v2.13.1
         with:
           egress-policy: audit
           
       - uses: actions/checkout@v5
       # This action is a composite action that uses tj-actions/setup-bin which is not in allowed list
       - name: Run auto-doc
-        uses: tj-actions/auto-doc@v3
+        uses: tj-actions/auto-doc@b10ceedffd794ec29a8fa8700529f40c1b64a951 # v3.6.0
