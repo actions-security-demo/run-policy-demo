@@ -1,0 +1,13 @@
+name: RunsOn - Fail
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    name: Deploy
+    # windows-latest runner label not allowed as per policy
+    runs-on: windows-latest
+    steps:
+      - name: Code Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
