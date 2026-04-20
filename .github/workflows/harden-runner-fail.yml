@@ -1,4 +1,4 @@
-name: RunsOn - Fail
+name: Harden-Runner - Fail
 on:
   workflow_dispatch:
 jobs:
