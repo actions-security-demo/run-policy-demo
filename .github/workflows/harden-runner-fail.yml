@@ -4,7 +4,7 @@ on:
 jobs:
   build:
     name: Deploy
-    runs-on: windows-latest
+    runs-on: ubuntu-slim
     steps:
       - name: Code Checkout
         uses: actions/checkout@v2
